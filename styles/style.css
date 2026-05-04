@@ -1,7 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  background-color: #000028;
+  background-color: var(--background-color-body);
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-attachment: fixed;
   font-weight: 400;
@@ -41,7 +41,7 @@
   border: none;
   background: none;
   text-transform: lowercase;
-  color: var(--accent-color);
+  color: var(--nav-color);
   width: 70px;
 }
 
@@ -58,13 +58,13 @@
   content: "";
   width: 100%;
   height: 1px;
-  background-color: var(--accent-color);
+  background-color: var(--nav-color);
   bottom: 0px;
   right: 0px;
 }
 
 button.header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color);
+  outline: 1px solid var(--nav-color);
 }
 
 .header__theme-menu-list {
@@ -123,7 +123,7 @@ button.header__theme-menu-button_active {
 
 .title-decor {
   background-color: var(--accent-color);
-  color: black;
+  color: var(--title-three-color);
   width: 100%;
   align-self: center;
   justify-self: center;
@@ -144,7 +144,7 @@ button.header__theme-menu-button_active {
 .link:hover::after {
   content: "";
   position: absolute;
-  background-color: var(--text-content-color);
+  background-color: var(--link-color);
   height: 1.4px;
   width: 100%;
   bottom: 0px;
@@ -152,7 +152,7 @@ button.header__theme-menu-button_active {
 }
 
 .link:focus {
-  outline: 1px solid var(--text-content-color);
+  outline: 1px solid var(--link-color);
 }
 
 .link:focus::after {
@@ -160,7 +160,7 @@ button.header__theme-menu-button_active {
 }
 
 .title-two {
-  color: var(--accent-color);
+  color: var(--title-two-color);
 }
 
 .content {
@@ -320,7 +320,7 @@ button.header__theme-menu-button_active {
 
   /*----------*/
 
-  .decrease-concentration-section div{
+  .decrease-concentration-section div {
     grid-column: 1 / 4;
   }
 
@@ -343,11 +343,10 @@ button.header__theme-menu-button_active {
 
   .section-img {
     grid-template-rows: repeat(3, auto);
-    grid-template-rows: auto 1fr;
     gap: 10px;
   }
 
-  .section-img h2 {
+  .section-img h3 {
     grid-row: 1 / 2;
     grid-column: 1 / 4;
   }
