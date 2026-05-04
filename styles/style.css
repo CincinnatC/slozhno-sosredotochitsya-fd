@@ -224,7 +224,7 @@ button.header__theme-menu-button_active {
 /*Не уверен что стоит создавать класс для футера, но вроде говорили где то что лучше так.
 Хотя исходя из текущих знаний вроде без разницы*/
 .footer {
-  height: 98vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -232,7 +232,6 @@ button.header__theme-menu-button_active {
   position: relative;
 }
 
-/*Не встают они ровно снизу. Где-то я замудрил в коде видимо. Новый класс создавать?*/
 .decorated-zone::after {
   content: "";
   position: absolute;
@@ -248,7 +247,7 @@ button.header__theme-menu-button_active {
 .decorated-zone::before {
   content: "";
   position: absolute;
-  bottom: -3px;
+  bottom: 10px;
   left: 10px;
   border-bottom: 1px solid var(--accent-color);
   border-left: 1px solid var(--accent-color);
@@ -259,7 +258,7 @@ button.header__theme-menu-button_active {
 
 .footer-logo {
   text-shadow: 2px 2px 0 var(--accent-color);
-  padding-top: 20px;
+  padding-top: 5px;
 }
 
 @media (min-width: 768px) {
@@ -355,7 +354,7 @@ button.header__theme-menu-button_active {
     display: grid;
     gap: 20px;
     max-width: 100%;
-    padding-left: 5.5px;
+    padding-left: 6px;
   }
 
   /*-------------*/
@@ -406,9 +405,16 @@ button.header__theme-menu-button_active {
   }
 
   .footer-logo {
-    padding: 0;
+    padding: 0 0 20px 0;
   }
 
+  .footer.decorated-zone::after { 
+    top: 10px; 
+  }
+
+  .footer.decorated-zone::before { 
+    bottom: 30px; 
+  }
 }
 
 .concentration-br {
@@ -417,7 +423,7 @@ button.header__theme-menu-button_active {
 
 @media (min-width: 1024px) {
 
-  .header__title{
+  .header__title {
     max-width: 98%;
   }
 
@@ -436,7 +442,7 @@ button.header__theme-menu-button_active {
   }
 
   .header__headline {
-    font-size: 157px; /*хз, как по макету... Та формула не работает*/
+    font-size: 157px; /*хз, как по макету сделал... Та формула не работает*/
   }
 
   .why-difficult-section {
@@ -463,4 +469,7 @@ button.header__theme-menu-button_active {
     grid-template-columns: 31.50% 1fr;
   }
 
+  .how-best-section div {
+    padding-left: 5px;
+  }
 }
