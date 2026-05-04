@@ -72,7 +72,8 @@ button.header__theme-menu-button_active {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 11px;
+  gap: 13px;
+  line-height: 21px; 
 }
 
 .rec {
@@ -101,11 +102,11 @@ button.header__theme-menu-button_active {
   grid-area: header__theme-menu;
   align-self: center;
   justify-self: right;
-  padding-top: 7px;
+  padding-top: 8px;
 }
 
 .header__headline {
-  line-height: 0.8;
+  line-height: 0.83;
   grid-area: header__headline;
   color: var(--header__headline-color);
   text-shadow: 4px 4px 0 var(--accent-color);
@@ -131,7 +132,7 @@ button.header__theme-menu-button_active {
 }
 
 .crutch-margin {
-  margin: 0;
+  margin-bottom: 20px;
 } /*Да-а, фигня, но только этот элемент без margin, хотя стили все как у title-decor*/
 
 
@@ -223,7 +224,7 @@ button.header__theme-menu-button_active {
 /*Не уверен что стоит создавать класс для футера, но вроде говорили где то что лучше так.
 Хотя исходя из текущих знаний вроде без разницы*/
 .footer {
-  height: 100vh;
+  height: 98vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -231,6 +232,7 @@ button.header__theme-menu-button_active {
   position: relative;
 }
 
+/*Не встают они ровно снизу. Где-то я замудрил в коде видимо. Новый класс создавать?*/
 .decorated-zone::after {
   content: "";
   position: absolute;
@@ -246,13 +248,18 @@ button.header__theme-menu-button_active {
 .decorated-zone::before {
   content: "";
   position: absolute;
-  bottom: 10px;
+  bottom: -3px;
   left: 10px;
   border-bottom: 1px solid var(--accent-color);
   border-left: 1px solid var(--accent-color);
   width: 25px;
   height: 25px;
   background: transparent;
+}
+
+.footer-logo {
+  text-shadow: 2px 2px 0 var(--accent-color);
+  padding-top: 20px;
 }
 
 @media (min-width: 768px) {
@@ -286,6 +293,14 @@ button.header__theme-menu-button_active {
     top: 20px;
     right: 20px;
   }
+  
+  .crutch-adjustment-padding-right {
+    right: 10px;
+  }
+
+  .crutch-adjustment-padding-left {
+    left: 10px;
+  }
 
   .decorated-zone::before {
     left: 20px;
@@ -304,7 +319,7 @@ button.header__theme-menu-button_active {
   
   .header__title {
     justify-self: end;
-    max-width: 98%;
+    max-width: 97.5%;
     margin: 0;
   }
 
@@ -331,12 +346,16 @@ button.header__theme-menu-button_active {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .crutch-margin {
+    margin: 0;
+  }
+
   .how-best-section div {
     grid-column: 2 / 4;
     display: grid;
     gap: 20px;
     max-width: 100%;
-    padding-left: 6px;
+    padding-left: 5.5px;
   }
 
   /*-------------*/
@@ -385,6 +404,11 @@ button.header__theme-menu-button_active {
     grid-row: 2 / 4;
     height: 100%;
   }
+
+  .footer-logo {
+    padding: 0;
+  }
+
 }
 
 .concentration-br {
@@ -392,17 +416,22 @@ button.header__theme-menu-button_active {
 }
 
 @media (min-width: 1024px) {
-  
+
+  .header__title{
+    max-width: 98%;
+  }
+
   .header__theme-menu-list {
     flex-direction: row;
     align-items: start;
+    gap: 11px;
   }
   
   .header__theme-menu {
     position: absolute;
     justify-self: center;
     align-self: start;
-    top: -10px;
+    top: -9px;
     left: calc(40% - 6px);
   }
 
