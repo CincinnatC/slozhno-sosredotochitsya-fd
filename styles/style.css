@@ -73,7 +73,7 @@ button.header__theme-menu-button_active {
   align-items: center;
   justify-content: center;
   gap: 13px;
-  line-height: 21px; 
+  line-height: 21px;
 }
 
 .rec {
@@ -408,12 +408,12 @@ button.header__theme-menu-button_active {
     padding: 0 0 20px 0;
   }
 
-  .footer.decorated-zone::after { 
-    top: 10px; 
+  .footer.decorated-zone::after {
+    top: 10px;
   }
 
-  .footer.decorated-zone::before { 
-    bottom: 30px; 
+  .footer.decorated-zone::before {
+    bottom: 30px;
   }
 }
 
