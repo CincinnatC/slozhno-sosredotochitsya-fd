@@ -111,7 +111,7 @@ button.header__theme-menu-button_active {
   grid-area: headline;
   color: var(--headline-color);
   text-shadow: 4px 4px 0 var(--accent-color);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); /*на 1024 он не 130px а 120px. Почему-у?*/
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   align-self: center;
   justify-self: left;
 }
@@ -142,7 +142,7 @@ button.header__theme-menu-button_active {
 
 .crutch-margin {
   margin-bottom: 20px;
-} /*Да-а, фигня, но только этот элемент без margin, хотя стили все как у title-decor*/
+}
 
 
 .link {
@@ -177,7 +177,6 @@ button.header__theme-menu-button_active {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  background-color: var(--background-color-body);
 }
 
 .text-content {
@@ -231,8 +230,6 @@ button.header__theme-menu-button_active {
   height: 100%;
 }
 
-/*Не уверен что стоит создавать класс для футера, но вроде говорили где то что лучше так.
-Хотя исходя из текущих знаний вроде без разницы*/
 .footer {
   height: 100vh;
   display: flex;
@@ -378,10 +375,6 @@ button.header__theme-menu-button_active {
     grid-row: 1 / 2;
     grid-column: 1 / 4;
   }
-
-  /*.section-img .title-decor {
-    margin-bottom: 10px;
-  }*/
 
   .gallery {
     grid-column: 1 / 4;
